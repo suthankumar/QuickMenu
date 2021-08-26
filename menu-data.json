@@ -3,65 +3,77 @@
         {
             "id": 1,
             "name": "Soup",
-            "price": 3
+            "price": 3,
+            "stock":3
         },
         {
             "id": 2,
             "name": "Pâté",
-            "price": 5
+            "price": 5,
+            "stock":3
         },
         {
             "id": 3,
             "name": "Bruschetta",
-            "price": 4.5
+            "price": 4.5,
+            "stock":3
         },
         {
             "id": 4,
             "name": "Prawn cocktail",
-            "price": 6
+            "price": 6,
+            "stock":3
         }
     ],
     "mains": [
         {
             "id": 5,
             "name": "Steak",
-            "price": 18
+            "price": 18,
+            "stock":3
         },
         {
             "id": 6,
             "name": "Meatballs",
-            "price": 11.50
+            "price": 11.50,
+            "stock":3
         },
         {
             "id": 7,
             "name": "Salmon fillet",
-            "price": 14
+            "price": 14,
+            "stock":0
         },
         {
             "id": 8,
             "name": "Vegetarian lasagna",
-            "price": 12
+            "price": 12,
+            "stock":3
         }
     ],
     "desserts": [
         {
             "id": 9,
             "name": "Sticky toffee",
-            "price": 18
+            "price": 18,
+            "stock":3
         },
         {
             "id": 10,
             "name": "Tiramisu",
-            "price": 4.5
+            "price": 4.5,
+            "stock":3
         },
         {
             "id": 11,
             "name": "Cheesecake",
-            "price": 4
+            "price": 4,
+            "stock":3
         },
         {
             "id": 12,
             "name": "Ice cream",
-            "price": 3.5
+            "price": 3.5,
+            "stock":3
         }
     ]}

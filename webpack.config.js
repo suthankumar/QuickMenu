@@ -1,8 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const tailwindcss = require('tailwindcss')
-const autoprefixer = require('autoprefixer')
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: "./public/index.html",
@@ -34,15 +32,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",  {
-            loader: 'postcss-loader', // postcss loader needed for tailwindcss
-            options: {
-              postcssOptions: {
-                ident: 'postcss',
-                plugins: [tailwindcss, autoprefixer],
-              },
-            },
-          },
+          "css-loader",  'postcss-loader',
           ],
       },
 
@@ -51,6 +41,9 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/public/webpack/'),
     filename: 'bundle.js',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [miniCssPlugin,htmlPlugin]
 };

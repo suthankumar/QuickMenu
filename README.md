@@ -3,7 +3,7 @@ Restaurant Menu Application
 ====================================
 ![alt text](https://github.com/suthankumar/QuickMenu/blob/main/homepage.PNG?raw=true)
 ![alt text](https://github.com/suthankumar/QuickMenu/blob/main/order.PNG?raw=true)
-## Getting Started - 
+## Getting Started
 
 First, run the development server:
 
@@ -20,7 +20,7 @@ run on http://localhost:8080/
 - **Homepage/Manage Menu page** - the restaurant can make a changes to the menu(they can change the price or the name of the meal and also they can add new meal if they wanted)
 
 ## My task
-Implemented all the Rules that you have mention including:
+Implemented all the Rules that it have mention including:
 - Each person must have at least two courses, one of which must be a main.
 - Each diner cannot have more than one of the same course.
 - There is only one piece of cheesecake left.
@@ -28,7 +28,7 @@ Implemented all the Rules that you have mention including:
 
 
 
-**What i have changed to orginial data**
+**What i have changed to original data that you provided**
 - Made chanages to the orginial `menu-data.json` data,  I have added "stock" key to each meal of the course and defined the intial stock level(for the Cheese cake I placed 1)
 
 **What would i have done if I had more time**

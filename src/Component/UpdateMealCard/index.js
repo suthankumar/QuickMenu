@@ -1,7 +1,8 @@
 
 import React from 'react';
 
-function UpdateMealCard({ml,selectedCourse, UpdateStock}) {
+function UpdateMealCard({ml, UpdateStock}) {
+
 //Update the name or price
   const updateName = (e) => {
     let value = e.target.value;

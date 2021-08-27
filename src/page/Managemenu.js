@@ -1,20 +1,14 @@
 import React,{useContext, useState,useEffect}from 'react';
 import MenuContext from '../context/MenuContext'; 
-import MealCard from '../Component/MealCard';
 import { Link } from "react-router-dom";
 import Header from '../Component/Header';
 import UpdateMealCard from '../Component/UpdateMealCard';
+import CourseTab from '../Component/CourseTab';
+
 
 export default function Managemenu() {
-    const {menu, setMenu} = useContext(MenuContext)
     const [selectedCourse, setSelectedCourse] = useState("mains");
-    console.log(menu)
-   
-    const onChangeTab=(course)=>{
-        if (selectedCourse != course){
-            setSelectedCourse(course)
-        } 
-    }
+    const {menu, setMenu} = useContext(MenuContext)
 
     const UpdateStock=(id,key, val)=>{
         setMenu({...menu, [selectedCourse]: menu[selectedCourse]
@@ -52,12 +46,7 @@ export default function Managemenu() {
                             </div>
                         </div>
 
-                        <div className="flex flex-row px-3">
-                        {Object.keys(menu).map((val, i)=>{
-                                return  <button key = {i}className={`${val === selectedCourse ? "bg-red-500":"bg-red-200"} px-3 mr-2 rounded-full hover:bg-red-500  text-white flex items-center 
-                                justify-center text-xl`} onClick={()=>onChangeTab(val)} >{val} </button>
-                        }) }
-                        </div>
+                        <CourseTab menu={menu} selectedCourse={selectedCourse} setSelectedCourse={setSelectedCourse}/>
                         <div className="overflow-y-auto menubox">
                            <div className="flex flex-wrap p-6 max-w-7xl justify-start ">
                                 {menu[selectedCourse].map((fd,i)=>{

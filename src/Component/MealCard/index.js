@@ -15,10 +15,6 @@ function MealCard({ml,selectedCourse, selectedDine, order, setOrder}) {
                   (x,i) => i == selectedDine 
                   ? {...x, list} : x) })
         }
-        // setOrder(list => list.map(
-        //     (x,i) => i == selectedDine 
-        //     ? {...x, meal : x.meal.map(y =>  y.course === selectedCourse 
-        //     ? {...y, selected:id} : y)} : x))
     }
 
     return (

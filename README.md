@@ -9,6 +9,8 @@ However, in this challenging time, we understand that not everyone has the luxur
 
 ## The task
 
+![alt text](https://github.com/suthankumar/Fresh-Beer/blob/master/homepage.png?raw=true)
+
 We would like you to build a web application.
 - The application will allow one user to select dishes on behalf of two diners.
 - The application will present a menu that will be provided and may later require adjustment by a restaurant.

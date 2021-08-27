@@ -173,7 +173,7 @@ export default function Order() {
                         <div className="flex  justify-center h-full">
                                 <div className=" shadow-xl w-full my-2 overflow-y-auto h-5/6">
                                         {order.list.map((o, i)=>{
-                                        return <CartList o ={o} selectedDine={selectedDine} order={order} UpdateOrderList={UpdateOrderList} menu={menu} idx={i} key = {i}/>})}
+                                        return <CartList dine ={o} selectedDine={selectedDine} order={order} UpdateOrderList={UpdateOrderList} menu={menu} idx={i} key = {i}/>})}
                                 </div>
                                 
                                 </div>

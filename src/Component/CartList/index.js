@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-function CartList({o, selectedDine, order, UpdateOrderList, menu, idx }) {
+function CartList({dine, selectedDine, order, UpdateOrderList, menu, idx }) {
     return (
         <div id = {"diner"+idx} onClick={()=>UpdateOrderList(idx)} className={`${selectedDine == idx ? "border-l-8  border-red-500 shadow-2xl" : ''}  my-2 bg-white hover:bg-gray-100`}>
             <div className={`${selectedDine == idx ? "bg-red-100" : ''}  p-2 flex `}>
@@ -24,7 +24,7 @@ function CartList({o, selectedDine, order, UpdateOrderList, menu, idx }) {
                     </div>}
                 </div>
             </div>
-            {o.meal.map((o, i)=>{return <div key ={i} className="ml-6 p-2 flex cursor-pointer border-b border-gray-100" >
+            {dine.meal.map((o, i)=>{return <div key ={i} className="ml-6 p-2 flex cursor-pointer border-b border-gray-100" >
                 <div className="flex-auto text-sm w-32">
                     <div className="font-bold">{menu[o.course].filter(g=> g.id ==o.selected)[0].name}</div>
                     <div className="text-gray-400">{o.course}</div>

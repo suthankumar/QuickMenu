@@ -3,7 +3,7 @@ import React from 'react';
 
 function CartList({o, selectedDine, order, UpdateOrderList, menu, idx }) {
     return (
-        <div onClick={()=>UpdateOrderList(idx)} className={`${selectedDine == idx ? "border-l-8  border-red-500 shadow-2xl" : ''}  my-2 bg-white hover:bg-gray-100`}>
+        <div id = {"diner"+idx} onClick={()=>UpdateOrderList(idx)} className={`${selectedDine == idx ? "border-l-8  border-red-500 shadow-2xl" : ''}  my-2 bg-white hover:bg-gray-100`}>
             <div className={`${selectedDine == idx ? "bg-red-100" : ''}  p-2 flex `}>
                 <div className="flex-auto text-sm w-32">
                     <div className="font-bold text-red-600">Diner {idx+1}</div>

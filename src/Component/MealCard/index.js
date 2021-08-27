@@ -18,7 +18,7 @@ function MealCard({ml,selectedCourse, selectedDine, order, setOrder}) {
     }
 
     return (
-        <div onClick={()=>onSelect(ml.id ,(ml.stock <= 0 || ml.allow==false ) )} 
+        <div id ={ml.name} onClick={()=>onSelect(ml.id ,(ml.stock <= 0 || ml.allow==false ) )} 
             className={`${order.list[selectedDine]?.meal.filter(f=> f.course == selectedCourse)[0]?.selected == ml.id ? 'bg-red-200 border-2 border-red-500':'bg-white'} w-60 py-4 px-8 
             ${ml.stock <= 0 || ml.allow==false ?"opacity-70":'hover:bg-red-200 cursor-pointer'}    shadow-lg rounded-lg m-2`}>
                 <div>

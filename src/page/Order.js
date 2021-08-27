@@ -26,7 +26,7 @@ export default function Order() {
     ],
   });
 
-  //Everytime order list changed,  this "useeffect" will run to calculate total and udpate stock level
+  //Everytime order list changed,  this "useEffect" will run to calculate total and udpate stock level
   useEffect(() => {
     let sum = 0;
     let stockTaken = order.list.reduce(
@@ -52,7 +52,6 @@ export default function Order() {
     stockTaken.forEach((e) => {
       let updatedMeal = [];
       for (const [key, value] of Object.entries(e.id)) {
-        // console.log(`${key} - ${value} used`)
         menu[e.course].map((o, i) => {
           let orgStock = ctx.menu[e.course][i].stock,
             meal = tempList[e.course][i];
@@ -118,7 +117,6 @@ export default function Order() {
     let list = [...order.list];
     //To delete the selected diner
     if (id != null && del) {
-      console.log(`${selectedDine} = = ${id}`);
       list = list.filter((g, i) => i != id);
       setOrder({ ...order, list: list });
       setSelectedDine(list.length - 1);

@@ -1,7 +1,7 @@
 # QuickMenu
 Restaurant Menu Application
 ====================================
-![alt text](https://github.com/suthankumar/QuickMenu/blob/master/homepage.png?raw=true)
+![alt text](https://github.com/suthankumar/QuickMenu/blob/master/order.png?raw=true)
 ## Getting Started - 
 
 First, run the development server:

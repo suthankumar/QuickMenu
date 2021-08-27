@@ -1,4 +1,4 @@
-import React, { createContext, useState} from "react"
+import React, { createContext, useState, useEffect} from "react"
 import data from "../../menu-data.json"
 
 const MenuContext = createContext({
@@ -7,11 +7,6 @@ const MenuContext = createContext({
 
 export function MenuContextProvider(props){
     const [menu, setMenu] = useState(data)
-    console.log("Context started....")
-
-    const updateOrder=()=>{
-
-    }
 
     const context ={menu, setMenu}
 

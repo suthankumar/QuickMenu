@@ -1,48 +1,39 @@
 # QuickMenu
 Restaurant Menu Application
 ====================================
+![alt text](https://github.com/suthankumar/QuickMenu/blob/master/homepage.png?raw=true)
+## Getting Started - 
 
-Thank you for accepting our coding challenge. Please take as much time as required to give us a good indication of your coding strengths, as your application will provide many topics of conversation in the next interview stage.
+First, run the development server:
 
-However, in this challenging time, we understand that not everyone has the luxury of sitting down to work on a test uninterrupted. Therefore if you don't manage to implement all of the rules, please describes how you would achieve them or any improvement you would make in the email.
+```bash
+npm install
+npm start
 
+run on http://localhost:8080/
+```
 
-## The task
+## Page Introduction - 3 Pages
+- **Homepage** - intial page 
+- **Homepage/Order Page** - It is place where the user can order for meal. one from the main course and other meal from different courses(starter, dessert).
+- **Homepage/Manage Menu page** - the restaurant can make a changes to the menu(they can change the price or the name of the meal and also they can add new meal)
 
-![alt text](https://github.com/suthankumar/Fresh-Beer/blob/master/homepage.png?raw=true)
-
-We would like you to build a web application.
-- The application will allow one user to select dishes on behalf of two diners.
-- The application will present a menu that will be provided and may later require adjustment by a restaurant.
-- The application will enforce some restrictions provided by the restaurant. (see [#rules](#rules))
-
-We have prepared a basic application structure for you using React and Webpack. Please add any additional libraries that you think are suitable, for example for CSS and testing.
-
-The menu data is provided in `menu-data.json` and the application is in `src/App.js`.
-
-Please write as clean and maintainable code as possible, and make sure that it's covered by test cases.
-
-
-## Rules
-
-
-_To recap, you will build an interface that allows a user to select dishes for a fixed party of **two diners**._\
-This restaurant unfortunately has a number of rules about the meals that can be ordered.
-
+## My task
+Implemented all the Rules that you have mention including:
 - Each person must have at least two courses, one of which must be a main.
 - Each diner cannot have more than one of the same course.
 - There is only one piece of cheesecake left.
 - Pierre the snobby waiter will not let you have prawn cocktail and salmon fillet in the same meal.
 
 
-## Acceptance criteria
 
-- The total bill amount is displayed when at least one dish has been selected.
-- An error message is displayed when I try to select an invalid menu combination.
+**What i have changed to orginial data**
+- Made chanage to the orginial `menu-data.json` data,  I have added "stock" key to each meal of the course and defined the intial stock level(for Cheese cake I placed one)
 
+**What would i have done if I had more time**
+- Designed the modal to show the alert for the user instead of  using the default javascript alert
+- More test case to check some function.
+- Should have implemented JSon server DB, so that I have the backend DB to communicate. Instead of losing all the data every time you refresh or start the application
 
-## Submission
-
-Please submit your program as an online repository or downloadable link to your point of contact at OpenTable.
 
 

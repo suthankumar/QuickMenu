@@ -42,13 +42,13 @@
             "id": 7,
             "name": "Salmon fillet",
             "price": 14,
-            "stock":0
+            "stock":3
         },
         {
             "id": 8,
             "name": "Vegetarian lasagna",
             "price": 12,
-            "stock":3
+            "stock":0
         }
     ],
     "desserts": [
@@ -68,7 +68,7 @@
             "id": 11,
             "name": "Cheesecake",
             "price": 4,
-            "stock":3
+            "stock":1
         },
         {
             "id": 12,

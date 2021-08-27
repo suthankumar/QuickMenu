@@ -13,7 +13,7 @@ export function MenuContextProvider(props){
 
     }
 
-    const context ={menu}
+    const context ={menu, setMenu}
 
     return <MenuContext.Provider value ={context}>
         {props.children}

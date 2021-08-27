@@ -5,6 +5,7 @@ import './styles.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Order from './page/Order';
 import {MenuContextProvider} from "./context/MenuContext"
+import Managemenu from './page/Managemenu';
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
             <Switch>
                  <Route exact path="/"> <Homepage /></Route>
                  <Route path="/order"><Order /></Route>
+                 <Route path="/managemenu"><Managemenu /></Route>
             </Switch>
             </BrowserRouter>
             </div>

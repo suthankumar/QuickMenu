@@ -1,12 +1,21 @@
 import React from "react";
 
 function CartList({ dine, selectedDine, order, UpdateOrderList, menu, idx }) {
+  //On user select any dinergroup from the cart to select or delete
+  const dinerHandler = (e, idx, del) => {
+    e.stopPropagation(); //stops the bubbling of an event to parent elements,preventing any parent handlers from being notified of the event.
+    //To delete diner group
+    del ? UpdateOrderList(idx, true) : UpdateOrderList(idx);
+  };
+
   return (
     <div
       id={"diner" + idx}
-      onClick={() => UpdateOrderList(idx)}
+      onClick={(e) => dinerHandler(e, idx)}
       className={`${
-        selectedDine == idx ? "border-l-8  border-red-500 shadow-2xl" : ""
+        selectedDine == idx
+          ? "border-l-8 cursor-pointer border-red-500 shadow-2xl"
+          : ""
       }  my-2 bg-white hover:bg-gray-100`}
     >
       <div className={`${selectedDine == idx ? "bg-red-100" : ""}  p-2 flex `}>
@@ -36,7 +45,7 @@ function CartList({ dine, selectedDine, order, UpdateOrderList, menu, idx }) {
           </div>
           {order.list.length > 1 && (
             <div
-              onClick={() => UpdateOrderList(idx, true)}
+              onClick={(e) => dinerHandler(e, idx, true)}
               className="w-4 h-4 hover:bg-red-200 rounded-full cursor-pointer text-red-700"
             >
               <svg

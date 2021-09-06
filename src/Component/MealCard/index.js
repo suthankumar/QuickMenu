@@ -15,7 +15,7 @@ function MealCard({ ml, selectedCourse, selectedDine, order, setOrder }) {
       setOrder({
         ...order,
         list: order.list.map((x, i) =>
-          i == selectedDine ? { ...x, list } : x
+          i == selectedDine ? { ...x, meal:list } : x
         ),
       });
     }

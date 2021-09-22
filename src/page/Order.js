@@ -26,6 +26,7 @@ export default function Order() {
     ],
   });
 
+
   //Everytime order list changed,  this "useEffect" will run to calculate total and udpate stock level
   useEffect(() => {
     let sum = 0;
@@ -48,6 +49,16 @@ export default function Order() {
       []
     );
 
+    // stockTaken.forEach((e)=>{
+    //   if(e.course == "mains"){
+    //     console.log(e.id)
+    //   }
+      
+    //   // if(e[5] == 2){
+
+    //   // }
+    // })
+
     let tempList = menu;
     stockTaken.forEach((e) => {
       let updatedMeal = [];
@@ -63,6 +74,7 @@ export default function Order() {
         });
       }
     });
+    //console.log(stockTaken)
 
     let curtDiner = order.list[selectedDine].meal,
       salmonFltIndex = menu["mains"].findIndex(
@@ -93,6 +105,9 @@ export default function Order() {
         salmonFlt.allow = true;
       }
     }
+
+    // console.log(sum)
+    // let newDiscount = sum - (sum* 7/100); console.log((1-(newDiscount/sum))*100)
     //Set all the update to the state
     setOrder({ ...order, totalCost: sum });
     setMenu({ ...tempList });
@@ -118,8 +133,8 @@ export default function Order() {
     //To delete the selected diner
     if (id != null && del) {
       list = list.filter((g, i) => i != id);
-      setOrder({ ...order, list: list });
       setSelectedDine(list.length - 1);
+      setOrder({ ...order, list: list });
     }
     //To Edit the selected diner
     else if (id != null && !del) {

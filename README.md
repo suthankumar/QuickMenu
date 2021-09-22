@@ -20,22 +20,12 @@ run on http://localhost:8080/
 - **Homepage/Manage Menu page** - the restaurant can make a changes to the menu(they can change the price or the name of the meal and also they can add new meal if they wanted)
 
 ## My task
-Implemented all the Rules that it have mention including:
+The rules that I have Implemented:
 - Each person must have at least two courses, one of which must be a main.
 - Each diner cannot have more than one of the same course.
 - There is only one piece of cheesecake left.
 - Pierre the snobby waiter will not let you have prawn cocktail and salmon fillet in the same meal.
 
-
-
-**What i have changed to original data that you provided**
-- Made chanages to the orginial `menu-data.json` data,  I have added "stock" key to each meal of the course and defined the intial stock level(for the Cheese cake I placed 1)
-
-**What would i have done if I had more time**
-- Designed the modal to show the alert for the user instead of  using the default javascript alert
-- More test case to check some function.
-- Should have implemented JSon server DB or Should have implemented to store data into local storage,  so that I have the backend DB to communicate. Instead of losing all the data every time you refresh or start the application.
-- Should have added the feature to delete the any dish if they want
 
 
 
